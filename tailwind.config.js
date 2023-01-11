@@ -8,8 +8,13 @@ module.exports = {
     extend: {
       fontFamily:{
         sans: ['univers1','univers2','univers3', 'sans-serif'],
+      },
+      backgroundImage: {
+        'insta': 'radial-gradient(var(--tw-gradient-stops))',
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }
