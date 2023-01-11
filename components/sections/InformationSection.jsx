@@ -7,7 +7,7 @@ const InformationSection = () => {
         <h1 className='text-4xl font-semibold text-white px-16 py-8'>Information for students</h1>
         <div className='grid lg:grid-cols-2 gap-10 px-16'>
         {
-            new Array(14).fill(0).map((i)=><StudentCard title='All study programs' description='On the webpages of your degree program you will find information on the study program structure, …' />)
+            new Array(14).fill(0).map((e,i)=><StudentCard key={i} title='All study programs' description='On the webpages of your degree program you will find information on the study program structure, …' />)
         }</div>
     </div>
   )

@@ -71,7 +71,7 @@ const Section1 = () => {
     ]},
    ].map((item,index) =>  <Card key={index} image={item.image} title={item.title} tags={item.tags} />)}
      </div>
-     <Button>STUDY PROGRAMS' WEBPAGES FOR STUDENTS</Button>
+     <Button>{"STUDY PROGRAMS' WEBPAGES FOR STUDENTS"}</Button>
       </div>
     
   )

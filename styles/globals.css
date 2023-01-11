@@ -3,8 +3,16 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'roboto';
-  src: url('https://www.tum.de/typo3conf/ext/in2template/Resources/Public/Fonts/Roboto/roboto-v29-latin-regular.woff2');
+  font-family: 'univers1';
+  src: url('https://www.student.uni-stuttgart.de/system/modules/de.stuttgart.uni.v3.basics/resources/fonts/univers/db1e9a24-d371-4686-ba25-77b32a84e0db.woff2');
+}
+@font-face {
+  font-family: 'univers2';
+  src: url('https://www.student.uni-stuttgart.de/system/modules/de.stuttgart.uni.v3.basics/resources/fonts/univers/73d8af9e-4b82-4953-81a5-8941aed30297.woff2');
+}
+@font-face {
+  font-family: 'univers3';
+  src: url('https://www.student.uni-stuttgart.de/system/modules/de.stuttgart.uni.v3.basics/resources/fonts/univers/50f62374-c967-49bb-8dba-0c8b7f7b50cf.woff2');
 }
 
 body{

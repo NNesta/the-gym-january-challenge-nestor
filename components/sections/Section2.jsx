@@ -48,7 +48,7 @@ const Section2 = () => {
       </div>
       <div className='flex flex-col gap-6 bg-white'>
 <img src="https://www.uni-stuttgart.de/universitaet/aktuelles/meldungen/img-news/instagram.jpg?__scale=w:220,h:220,cx:333,cy:0,cw:1333,ch:1333" alt="" />   
-<h1 className="text-4xl font-bold">The University of Stuttgart's five most beautiful Instagram pictures</h1>
+<h1 className="text-4xl font-bold">{"The University of Stuttgart's five most beautiful Instagram pictures"}</h1>
         <div className="flex items-center gap-2">
           <p>Article</p>
           <hr className='w-[1px] h-2' />
@@ -71,7 +71,7 @@ const Section2 = () => {
       
       <div className='flex flex-col gap-6 bg-white'>
 <img src="https://www.uni-stuttgart.de/universitaet/aktuelles/video/img-video-vorschaubilder/24A_1280x720.jpg?__scale=w:560,h:400,cx:136,cy:0,cw:1008,ch:720" alt="" /> 
-<h1 className="text-4xl font-bold">Latest episode: "Intelligent systems will help us in crises and in the future"</h1>   
+<h1 className="text-4xl font-bold">{'Latest episode: "Intelligent systems will help us in crises and in the future"'}</h1>   
      <div className="flex items-center gap-2">
           <p>Video</p>
           <hr className='w-[1px] h-2' />
