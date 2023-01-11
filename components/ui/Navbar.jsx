@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Wrapper from './Wrapper';
 
@@ -14,14 +15,16 @@ const Navbar = () => {
       };
       window.addEventListener("scroll", changeColor);
     }, []);
-  
+    const dynamicRoute = useRouter().asPath;
+
+    useEffect(() => setShow(false), [dynamicRoute]);
     useEffect(() => {
       document.body.style.overflow = show?"hidden":"auto";
       return () => (document.body.style.overflow = "scroll");
   },[show]);
   return (
-    <Wrapper styles='fixed inset-x-0 mx-auto'>
-      <div className={`bg-[#004191] whitespace-nowrap relative z-10 text-white flex justify-end duration-300 ease-in-out ${showNav2?"mt-0":"-mt-20"} gap-6 lg:px-36 py-2 items-center`}>
+    <Wrapper styles='fixed inset-x-0 mx-auto w-screen'>
+      <div className={`bg-[#004191] whitespace-nowrap relative z-10 text-white flex justify-end duration-300 ease-in-out ${showNav2?"mt-0":"-mt-20"} gap-6 px-4 lg:px-36 py-2 items-center`}>
       University of Stuttgart
       <span class="material-symbols-outlined rounded-full border p-1">
 chevron_right
@@ -34,15 +37,22 @@ chevron_right
         {/* <p className='-mt-6 -ml-16  text-[#333333] text-[17.6px] leading-[22.8px]'>For students</p> */}
         </Link>
           
-        <div className='flex gap-2 items-center'>
-       { !show&&<div className='hidden lg:flex flex-col'>
-          <img className='h-8 w-8' src="/assets/language.svg" alt="" />
-        <span class="material-symbols-outlined">
+        <div className='flex gap-2 items-center '>
+        
+       { !show&&<div className='hidden lg:flex flex-col group relative h-12 w-12 hover:border-2 border-black rounded-full items-center justify-center'>
+        <div className=''>
+          <img className='h-8 w-8 cursor-pointer' src="/assets/language.svg" alt="" />
+        </div>
+        <span class="material-symbols-outlined absolute top-full group-hover:hidden">
 expand_more
 </span>
+<div className='hidden absolute top-full group-hover:flex flex-col gap-1'>
+<span className='p-2 bg-gray-300 text-black rounded-full cursor-pointer'>DE</span>
+<span className='p-2 bg-gray-100 text-gray-400 rounded-full cursor-pointer'>EN</span>
+</div>
         </div>}
         <div className='flex items-center gap-4'>
-        <span class="material-symbols-outlined hidden lg:block">
+        <span class="material-symbols-outlined hidden lg:block cursor-pointer">
 search
 </span>
 <button onClick={()=>setShow(!show)}>
@@ -51,7 +61,8 @@ menu
 </span>:<span class="material-symbols-outlined">
 close
 </span>}</button>
-        </div></div>
+        </div>
+        </div>
       </div>
       <div className={`absolute custom-scroll inset-x-0 ${show?"top-0":"top-[1000%] lg:-top-[800%]"} h-screen w-full duration-300 ease-in-out   bg-[#303A3D] bg-opacity-90`}>
         <ul className='scrollbar-thin   scrollbar-thumb-[#00BCFF] flex flex-col gap-4 text-white max-w-[960px] mx-auto overflow-y-scroll mt-[11rem] h-[600px]'>

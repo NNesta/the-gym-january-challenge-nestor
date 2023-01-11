@@ -26,7 +26,7 @@ chevron_right
     </div>
     </div>
     </div>
-    <Link href='#hero' className='fixed bg-[#004191] hover:bg-[#333333] duration-300 ease-in-out group right-48 bottom-20 h-20 w-20 rounded-full flex items-center justify-center '>
+    <Link href='#hero' className='fixed bg-[#004191] hover:bg-[#333333] duration-300 ease-in-out group right-8 lg:right-48 bottom-16 w-12 h-12 lg:h-20 lg:w-20 rounded-full flex items-center justify-center '>
    <img className='group-hover:-translate-y-4 duration-300 ease-in-out' src="/assets/arrowup.svg" alt="" />
     </Link>
     </div>

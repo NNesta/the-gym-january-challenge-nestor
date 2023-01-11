@@ -7,7 +7,7 @@ const Section1 = () => {
       <div className='flex flex-col items-center my-16 max-w-[990px] mx-auto px-2'>
      <div className='bg-[#EEEEEE] flex flex-col items-start gap-4 max-w-[630px] w-screen mx-auto p-3 leading-[20.8px] mb-6 text-[#333333]'>
       <p>Begriff</p>
-      <input placeholder="Suchen Sie nach Begriffen aus dem Uni-Glossar" className=' w-full mb-[15px] leading-[20px] text-[14px] shadow-s placeholder:text-[#555555]' type="text" name="" id="" />
+      <input placeholder="Suchen Sie nach Begriffen aus dem Uni-Glossar" className=' w-full mb-[15px] leading-[20px] text-[14px] shadow-s placeholder:text-[#555555] p-2 border border-gray-200' type="text" name="" id="" />
      <Button>BEGRIFF SUCHEN</Button>
      </div>
      <div className='grid lg:grid-cols-3 my-16 gap-6'>
