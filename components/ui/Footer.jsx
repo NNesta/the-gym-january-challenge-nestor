@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Wrapper from './Wrapper';
 import {ImFacebook, ImTwitter, ImLinkedin} from 'react-icons/im';
-import {BsInstagram} from 'react-icons/bs';
+import {BsInstagram, BsMastodon} from 'react-icons/bs';
 import {TfiYoutube} from 'react-icons/tfi';
 
 const Footer = () => {
@@ -14,7 +14,8 @@ const Footer = () => {
         <div className='flex flex-wrap justify-center gap-4 items-center'>
           <div className='flex flex-col gap-4 items-center'><div className='p-4 border rounded-full hover:bg-[#004191] duration-200 ease-in-out cursor-pointer'><ImFacebook className=' h-6 w-6'/></div><h4>Facebook</h4></div>
           <div className='flex flex-col gap-4 items-center'><div className='p-4 border rounded-full insta duration-300 ease-in-out cursor-pointer'><BsInstagram className=' h-6 w-6'/></div><h4>Instagram</h4></div>
-          <div className='flex flex-col gap-4 items-center'><div className='p-4 border rounded-full hover:bg-[#00BEFF] duration-200 ease-in-out cursor-pointer'><ImTwitter className=' h-6 w-6'/></div><h4>Twitte</h4></div>
+          <div className='flex flex-col gap-4 items-center'><div className='p-4 border rounded-full hover:bg-[#00BEFF] duration-200 ease-in-out cursor-pointer'><ImTwitter className=' h-6 w-6'/></div><h4>Twitter</h4></div>
+          <div className='flex flex-col gap-4 items-center'><div className='p-4 border rounded-full hover:bg-[#6159ED] duration-200 ease-in-out cursor-pointer'><BsMastodon className=' h-6 w-6'/></div><h4>Mastodon</h4></div>
           <div className='flex flex-col gap-4 items-center'><div className='p-4 border rounded-full hover:bg-red-800 duration-200 ease-in-out cursor-pointer'><TfiYoutube className=' h-6 w-6'/></div><h4>Youtube</h4></div>
           <div className='flex flex-col gap-4 items-center'><div className='p-4 border rounded-full hover:bg-blue-400 duration-200 ease-in-out cursor-pointer'><ImLinkedin className=' h-6 w-6'/></div><h4>Linkedin</h4></div>
           <div className='flex flex-col gap-4 items-center'><div className='p-4 border rounded-full group hover:bg-white duration-200 ease-in-out cursor-pointer'><img src='/assets/usus.svg' className='group-hover:hidden h-8 w-8 object-contain'/><img src='/assets/usus2.svg' className='group-hover:block hidden h-8 w-8 object-contain'/></div><h4>USUS-Blog</h4></div>
