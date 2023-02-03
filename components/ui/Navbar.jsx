@@ -2,8 +2,11 @@ import React,{useState,useEffect} from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Wrapper from './Wrapper';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 const Navbar = () => {
+  
   const [show,setShow] = useState(false);
     const [showNav,setShowNav] = useState(false);
     const [showNav2,setShowNav2] = useState(true);
@@ -30,41 +33,52 @@ const Navbar = () => {
 chevron_right
 </span>
       </div>
-      <div className={`flex max-w-screen relative z-50 justify-between items-center py-8 lg:px-28 ${show?"text-white bg-[#333333]":"text-black bg-white"}`}>
+      <div className={`flex duration-300 ease-in-out max-w-screen relative z-50 justify-between items-center py-8 lg:px-28 ${show?"text-white bg-[#333333]":"text-black bg-white"}`}>
         <Link href='/' className='flex flex-col items-center'>
-        {show?<img className='h-[45px] lg:h-[60px]' src="/assets/logo3.png" alt="" />:
-        <img className='h-[45px] lg:h-[60px]' src="/assets/logo2.png" alt="" />}
+        {show?<img className='h-[45px] lg:h-[60px]' src="/assets/logo3.PNG" alt="" />:
+        <img className='h-[45px] lg:h-[60px]' src="/assets/logo2.PNG" alt="" />}
         {/* <p className='-mt-6 -ml-16  text-[#333333] text-[17.6px] leading-[22.8px]'>For students</p> */}
         </Link>
           
         <div className='flex gap-2 items-center '>
         
-       { !show&&<div className='hidden lg:flex flex-col group relative h-12 w-12 hover:border-2 border-black rounded-full items-center justify-center'>
+       { !show&&<div className='hidden lg:flex flex-col group relative h-12 w-12  hover:border-2 border-black rounded-full items-center justify-center'>
+          <Tippy placement='left' content={<span className="text-white">Languages for this page</span>}>
         <div className=''>
           <img className='h-8 w-8 cursor-pointer' src="/assets/language.svg" alt="" />
         </div>
+          </Tippy>
         <span class="material-symbols-outlined absolute top-full group-hover:hidden">
 expand_more
 </span>
-<div className='hidden absolute top-full group-hover:flex flex-col gap-1'>
-<span className='p-2 bg-gray-300 text-black rounded-full cursor-pointer'>DE</span>
-<span className='p-2 bg-gray-100 text-gray-400 rounded-full cursor-pointer'>EN</span>
+<div className='hidden absolute top-[110%] group-hover:flex flex-col gap-1'>
+  <Tippy placement='left' content={<span className="text-white">Sprache wechseln: Deutsch</span>}>
+<span  className='p-2 bg-gray-300 text-black rounded-full cursor-pointer hover:border  border-black'>DE</span>
+  </Tippy>
+  <Tippy placement='left' content={<span className="text-white">Current language: English</span>}>
+<span className='p-2 bg-gray-100 text-gray-400 rounded-full cursor-pointer hover:border  border-black'>EN</span>
+  </Tippy>
 </div>
         </div>}
         <div className='flex items-center gap-4'>
+        <Tippy placement='left' content={<span className="text-white">Search</span>}>
         <span class="material-symbols-outlined hidden lg:block cursor-pointer">
 search
 </span>
+</Tippy>
+<Tippy placement='left' content={<span className="text-white">Main navigation</span>}>
 <button onClick={()=>setShow(!show)}>
 {!show?<span class="material-symbols-outlined">
 menu
 </span>:<span class="material-symbols-outlined">
 close
-</span>}</button>
+</span>}
+</button>
+</Tippy>
         </div>
         </div>
       </div>
-      <div className={`absolute custom-scroll inset-x-0 ${show?"top-0":"top-[1000%] lg:-top-[800%]"} h-screen w-full duration-300 ease-in-out   bg-[#303A3D] bg-opacity-90`}>
+      <div className={`absolute custom-scroll inset-x-0 ${show?"top-0":"bottom-[250%]"} h-screen w-full duration-[4000] ease-in-out   bg-[#303A3D] bg-opacity-90`}>
         <ul className='scrollbar-thin   scrollbar-thumb-[#00BCFF] flex flex-col gap-4 text-white max-w-[960px] mx-auto overflow-y-scroll mt-[11rem] h-[600px]'>
 {
   [
@@ -120,5 +134,6 @@ close
     </Wrapper>
   )
 }
+
 
 export default Navbar

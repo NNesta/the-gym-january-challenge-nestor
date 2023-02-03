@@ -11,7 +11,9 @@ const Section1 = () => {
      <Button>BEGRIFF SUCHEN</Button>
      </div>
      <div className='grid lg:grid-cols-3 my-16 gap-6'>
-   {[
+      
+   {
+   [
     {image:'https://www.student.uni-stuttgart.de/img/easydb-2019_11_20_Unitag_118.jpg?__scale=w:370,h:370,cx:332,cy:0,cw:1335,ch:1335',
       title:'Digital services',
     tags:[
