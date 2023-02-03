@@ -3,7 +3,7 @@ import StudentCard from '../ui/StudentCard';
 
 const InformationSection = () => {
   return (
-    <div className='bg-[#004394] '>
+    <div className='bg-[#004394] py-12 my-6'>
       <div className='max-w-[960px] mx-auto'>
         <h1 className='text-[26px] leading-[33.8px] my-5 font-bold text-white'>Information for students</h1>
         <div className='grid lg:grid-cols-2 gap-10'>
